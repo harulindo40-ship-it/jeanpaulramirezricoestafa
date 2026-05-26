@@ -1,0 +1,62 @@
+# ═══════════════════════════════════════════════════════════════
+# _headers — Cloudflare Pages / Vercel / Netlify
+# Jean Paul Ramirez Rico | Expediente de Estafa
+# ═══════════════════════════════════════════════════════════════
+
+# ── Cabeceras globales de seguridad ──────────────────────────
+/*
+  # Evita que el navegador adivine el tipo de contenido (seguridad)
+  X-Content-Type-Options: nosniff
+
+  # Protege contra clickjacking — nadie puede meter tu site en un iframe
+  X-Frame-Options: SAMEORIGIN
+
+  # Activa protección XSS en navegadores legacy
+  X-XSS-Protection: 1; mode=block
+
+  # Controla qué información de referrer se envía (privacidad de visitantes)
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Política de permisos — deshabilita micrófonos/cámara/localización
+  Permissions-Policy: camera=(), microphone=(), geolocation=()
+
+  # Content Security Policy — solo carga recursos desde el mismo dominio
+  # Permite Google Fonts (para las fuentes) y Canvas (JS inline)
+  Content-Security-Policy: default-src 'self'; style-src 'self' https://fonts.googleapis.com 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; connect-src 'self'; frame-ancestors 'none';
+
+  # HSTS — fuerza HTTPS por 1 año
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Cache de assets estáticos por 1 mes
+  Cache-Control: public, max-age=2592000
+
+# ── Imágenes — Anti-Hotlink + Cache ──────────────────────────
+# Bloquea que sitios externos incrusten tus imágenes directamente
+# (un bot DMCA no puede hacer un match de URL si no puede acceder al archivo)
+/*.jpg
+  Cache-Control: public, max-age=2592000, immutable
+  X-Robots-Tag: index, follow
+
+/*.jpeg
+  Cache-Control: public, max-age=2592000, immutable
+  X-Robots-Tag: index, follow
+
+/*.png
+  Cache-Control: public, max-age=2592000, immutable
+  X-Robots-Tag: index, follow
+
+/*.webp
+  Cache-Control: public, max-age=2592000, immutable
+
+# ── HTML — No cache para que Google siempre vea la versión actual ──
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+  Pragma: no-cache
+
+# ── Sitemap y robots siempre frescos ──
+/sitemap.xml
+  Cache-Control: max-age=86400
+  Content-Type: application/xml; charset=utf-8
+
+/robots.txt
+  Cache-Control: max-age=86400

@@ -1,0 +1,47 @@
+User-agent: *
+Allow: /
+Disallow: /download_assets.py
+
+# Sitemap
+Sitemap: https://jean-paul-ramirez-rico-estafa.info/sitemap.xml
+
+# ─── Block known DMCA scraper bots ───────────────────────────────
+# Estos agentes son usados por herramientas de detección de copyright
+# para rastrear imágenes y generar reportes DMCA automatizados.
+User-agent: Bytespider
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# ─── Permitir Googlebot explícitamente ───────────────────────────
+User-agent: Googlebot
+Allow: /
+Allow: /assets/
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.webp
+
+User-agent: Googlebot-Image
+Allow: /
+Allow: /*.jpg
+Allow: /*.png
+Allow: /*.webp
+
+User-agent: Bingbot
+Allow: /

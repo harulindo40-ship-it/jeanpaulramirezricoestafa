@@ -1,0 +1,81 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options",    "value": "nosniff" },
+        { "key": "X-Frame-Options",           "value": "SAMEORIGIN" },
+        { "key": "X-XSS-Protection",          "value": "1; mode=block" },
+        { "key": "Referrer-Policy",           "value": "strict-origin-when-cross-origin" },
+        { "key": "Strict-Transport-Security", "value": "max-age=31536000; includeSubDomains; preload" }
+      ]
+    },
+    {
+      "source": "/",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/(.*)\\.html",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/posts/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html; charset=utf-8" },
+        { "key": "Cache-Control", "value": "no-cache, no-store, must-revalidate" }
+      ]
+    },
+    {
+      "source": "/sitemap.xml",
+      "headers": [
+        { "key": "Content-Type",  "value": "application/xml; charset=utf-8" },
+        { "key": "Cache-Control", "value": "max-age=86400" }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/posts/expediente-colombia-jean-paul-ramirez",
+      "destination": "/posts/expediente-colombia-jean-paul-ramirez.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts/red-familiar-estafa-ramirez-rico",
+      "destination": "/posts/red-familiar-estafa-ramirez-rico.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts/sentencia-tsj-robert-ramirez",
+      "destination": "/posts/sentencia-tsj-robert-ramirez.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts/investigacion-robert-ramirez-rico",
+      "destination": "/posts/investigacion-robert-ramirez-rico.html",
+      "permanent": false
+    },
+    {
+      "source": "/posts",
+      "destination": "/posts.html",
+      "permanent": false
+    },
+    {
+      "source": "/testimonios",
+      "destination": "/testimonios.html",
+      "permanent": false
+    },
+    {
+      "source": "/pruebas",
+      "destination": "/pruebas.html",
+      "permanent": false
+    }
+  ]
+}
