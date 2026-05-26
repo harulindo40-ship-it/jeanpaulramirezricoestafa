@@ -3,7 +3,7 @@ Allow: /
 Disallow: /download_assets.py
 
 # Sitemap
-Sitemap: https://jean-paul-ramirez-rico-estafa.info/sitemap.xml
+Sitemap: https://jeanpaul-ramirez-rico-estafa.info/sitemap.xml
 
 # ─── Block known DMCA scraper bots ───────────────────────────────
 # Estos agentes son usados por herramientas de detección de copyright
