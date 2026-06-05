@@ -137,4 +137,7 @@ También puede reportar su caso a:
 
 ---
 
-*Expediente actualizado. Publicado bajo principios de libertad de prensa y denuncia ciudadana de interés público.*
+*Expediente actualizado. Publicado bajo principios de libertad de prensa y denuncia ciudadana de interés público.*   <img width="700" height="534" alt="image" src="https://github.com/user-attachments/assets/699ef370-9e34-4aca-be81-929ae10759e5" />
+
+<img width="1366" height="768" alt="image" src="https://github.com/user-attachments/assets/57c01828-1e91-4eeb-8c9d-3ba984be4ed2" />
+
